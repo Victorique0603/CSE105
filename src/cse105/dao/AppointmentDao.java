@@ -7,6 +7,7 @@ package cse105.dao;
 
 import cse105.model.Appointment;
 import java.util.List;
+import java.util.Map;
 
 /**
  *
@@ -15,7 +16,7 @@ import java.util.List;
 public interface AppointmentDao {
     public boolean addAppointment (Appointment app);
     public boolean updateAppointment(int index, Appointment app);
-    public List<Appointment> returnAppsOrderedByLocation();
+    public Map<String, List<Appointment>> returnAppsOrderedByLocation();
     public List<Appointment> returnAppsOrderedByDate();
     public List<Appointment> returnApps();
     public boolean removeAppointment(Appointment app);
